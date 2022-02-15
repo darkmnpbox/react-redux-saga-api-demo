@@ -19,7 +19,7 @@ export function Trending() {
         <section className='d-flex justify-content-around bg-secondary flex-wrap m-auto'>
             {data.loading && <Loading />}
             {!data.loading && data.error && <Error message={data.message} />}
-            {!data.loading && !data.error && data.data.map((movie => < Movie key={data.id} movie={movie} />))}
+            {!data.loading && !data.error && data.data.map((movie => < Movie key="{data.id}" movie={movie} />))}
         </section>
     )
 }

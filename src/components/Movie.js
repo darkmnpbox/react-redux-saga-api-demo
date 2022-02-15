@@ -1,10 +1,8 @@
-import React, { useEffect } from 'react';
-import environment from '../config/env';
 
-const BASE_IMAGE_URL = environment.BASE_IMAGE_URL;
+
+const BASE_IMAGE_URL = process.env.REACT_APP_BASE_IMAGE_URL;
 
 export function Movie({ movie }) {
-  useEffect(() => { console.log(movie.id) }, [])
   return (
     <div className="card mt-2" style={{ width: "25rem" }}>
       <img src={BASE_IMAGE_URL + movie.poster_path} height="256px" className="card-img-top img-responsive rounded mx-auto d-block" alt="cover" />

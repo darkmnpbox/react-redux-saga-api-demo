@@ -1,11 +1,10 @@
-import environment from '../../config/env';
 import { call, put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
 import { FETCH_TRENDING_MOVIES_SUCCESS, FETCH_TRENDING_MOVIES_REQUEST, FETCH_TRENDING_MOVIES_FAILED } from '../trending/types';
 
 
-const TRENDING_MOVIES_END_POINT = environment.TRENDING_MOVIES_END_POINT;
-const API_KEY = environment.API_KEY;
+const TRENDING_MOVIES_END_POINT = process.env.REACT_APP_TRENDING_MOVIES_END_POINT;
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 
 function* getTrendingMovies() {
