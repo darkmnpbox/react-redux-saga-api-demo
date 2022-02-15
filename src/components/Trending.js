@@ -12,8 +12,8 @@ export function Trending() {
     const dispatch = useDispatch();
     const data = useSelector(state => state.terndingMovieReducer)
     useEffect(() => {
-        dispatch(fetchTrendingMoviesRequest())
-    }, []);
+        dispatch(fetchTrendingMoviesRequest());
+    }, [dispatch]);
 
     return (
         <section className='d-flex justify-content-around bg-secondary flex-wrap m-auto'>
